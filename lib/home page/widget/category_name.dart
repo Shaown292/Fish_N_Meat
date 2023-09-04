@@ -40,7 +40,7 @@ class CategoryName extends StatelessWidget {
             ],
           ),
         ),
-         Expanded(
+         const Expanded(
 
            child: Divider(
             color: Color(0xFFFFC107),

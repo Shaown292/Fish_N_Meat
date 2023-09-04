@@ -1,10 +1,13 @@
 
+import 'package:fish_n_meat/home%20page/view/home%20category/customers%20review/customer_review_lists.dart';
+import 'package:fish_n_meat/home%20page/view/home%20category/popular%20items/popular_items_list.dart';
+import 'package:fish_n_meat/home%20page/view/home%20category/shop%20by%20category/shop_by_category_lists.dart';
+import 'package:fish_n_meat/home%20page/view/home%20category/why%20fish%20and%20meat/why_fish_n_meat.dart';
 import 'package:fish_n_meat/home%20page/widget/category_name.dart';
 import 'package:fish_n_meat/widgets/appbar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-
 import '../../custom fonts/custom_fonts.dart';
-
+import 'bottom slider/bottom_slider.dart';
 import 'home category/best deals/best_deals_list.dart';
 import 'home category/best seller card/best_sellers_list.dart';
 import 'home category/view/slider_view.dart';
@@ -78,12 +81,14 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                const Positioned(
+                 Positioned(
+                  width: MediaQuery.of(context).size.width,
                   bottom: 0,
-                  child: SliderView(),
+                  child: const SliderView(),
                 )
               ],
             ),
+            // SliderView(),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
@@ -118,8 +123,32 @@ class _HomePageState extends State<HomePage> {
                   const BestDealsList(),
 
                   const SizedBox(
+                    height: 20.0,
+                  ),
+                  const CategoryName(
+                      icon: Icons.workspace_premium,
+                      categoryName: "Popular Items"),
+                  const SizedBox(
                     height: 10.0,
                   ),
+                  const PopularItemsList(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  const CategoryName(
+                      icon: Icons.workspace_premium,
+                      categoryName: "Shop by category"),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  const ShopByCategoryList(),
+                  const SizedBox(height: 20.0,),
+                  const WhyFishNMeat(),
+                  const SizedBox(height: 20.0,),
+                  const MyImageSlider(),
+                  const SizedBox(height: 20.0,),
+                  const CustomerReviewLists(),
+                  const SizedBox(height: 40.0,),
                 ],
               ),
             ),

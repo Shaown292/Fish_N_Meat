@@ -15,7 +15,7 @@ class CustomFonts {
   }
 
 
-  static TextStyle myStyle({double size = 13, Color? color, FontWeight? weight,}) {
+  static TextStyle myStyle({double size = 13, Color? color, FontWeight? weight}) {
     return TextStyle(
       fontFamily: _FONT_FAMILY,
       fontSize: size,
