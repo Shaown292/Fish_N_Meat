@@ -1,9 +1,9 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import '../Dash Board/bottom_navigation_bar.dart';
 import '../home page/view/home_page.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen>
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(const Duration(milliseconds: 5000), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (_) => const HomePage(),
+        builder: (_) => const DashBoard(),
       ));
     });
 

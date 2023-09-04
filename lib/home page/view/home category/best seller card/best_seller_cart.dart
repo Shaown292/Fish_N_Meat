@@ -30,7 +30,7 @@ class BestSellerCart extends StatelessWidget {
           children: [
             Container(
               height: 150.0,
-              width: 300.0,
+              width: widthOfTheDevice*0.75,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)),
                 image: DecorationImage(

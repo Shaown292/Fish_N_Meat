@@ -38,13 +38,13 @@ class _CustomerReviewListsState extends State<CustomerReviewLists> {
         CarouselSlider(
           options: CarouselOptions(
             autoPlay: true,
-            height: 200,
+            height: 205,
             autoPlayCurve: Curves.fastOutSlowIn,
             autoPlayAnimationDuration: const Duration(milliseconds: 800),
             autoPlayInterval: const Duration(seconds: 2),
             enlargeCenterPage: true,
             aspectRatio: 2.0,
-            viewportFraction: 0.9,
+            viewportFraction: 0.76,
             onPageChanged: (index, reason) {
               setState(() {
                 myCurrentIndex = index;

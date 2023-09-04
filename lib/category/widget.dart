@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SliderWidget extends StatelessWidget {
+class CategoryWidget extends StatelessWidget {
   final String productName;
   final String img;
-  const SliderWidget({
+  const CategoryWidget({
     Key? key,
     required this.productName,
     required this.img,
@@ -16,13 +16,13 @@ class SliderWidget extends StatelessWidget {
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal: 3.0),
       child: Container(
-        height: 10,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            gradient:  LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.topCenter,
-                colors: [Colors.yellow.shade500, Colors.black])),
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              gradient:  LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [Colors.yellow.shade500, Colors.black])),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
