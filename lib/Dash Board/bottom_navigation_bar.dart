@@ -1,9 +1,13 @@
+import 'package:fish_n_meat/Menu/sign%20up/sign_up.dart';
 import 'package:fish_n_meat/constant/constant.dart';
 import 'package:fish_n_meat/custom%20fonts/custom_fonts.dart';
+import 'package:fish_n_meat/favorite%20page/favorite_page.dart';
 import 'package:fish_n_meat/home%20page/view/home_page.dart';
 import 'package:flutter/material.dart';
 
+import '../Menu/menu.dart';
 import '../category/category_view.dart';
+import '../contact us/contact_us.dart';
 import '../widgets/appbar/custom_app_bar.dart';
 
 class DashBoard extends StatefulWidget {
@@ -19,8 +23,8 @@ class _DashBoardState extends State<DashBoard> {
   final pages = [
     const HomePage(),
     const CategoryView(),
-    const Page3(),
-    const Page4(),
+    const FavoritePage(),
+    const ContactUs(),
   ];
 
   @override
@@ -162,7 +166,7 @@ class _DashBoardState extends State<DashBoard> {
             GestureDetector(
               onTap: () => setState(() {
                 pageIndex = 3;
-                print(pageIndex);
+
               }),
               child: pageIndex == 3
                   ? Column(
@@ -201,86 +205,9 @@ class _DashBoardState extends State<DashBoard> {
   }
 }
 
-class Page1 extends StatelessWidget {
-  const Page1({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 1",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
 
-class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 2",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
 
-class Page3 extends StatelessWidget {
-  const Page3({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 3",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
 
-class Page4 extends StatelessWidget {
-  const Page4({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 4",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
