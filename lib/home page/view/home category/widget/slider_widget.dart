@@ -16,7 +16,7 @@ class SliderWidget extends StatelessWidget {
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal: 3.0),
       child: Container(
-        height: 10,
+        height: 0,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
             gradient:  LinearGradient(

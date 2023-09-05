@@ -10,24 +10,7 @@ class CategoryView extends StatefulWidget {
 }
 
 class _CategoryViewState extends State<CategoryView> {
-  static List<CategoryModel> items = [
-    CategoryModel(
-        image : "assets/images/category2.png",
-        name : "Meat"
-    ),
-    CategoryModel(
-        image : "assets/images/category2.png",
-        name : "Meat"
-    ),
-    CategoryModel(
-        image : "assets/images/category2.png",
-        name : "Meat"
-    ),
-    CategoryModel(
-        image : "assets/images/category2.png",
-        name : "Meat"
-    ),
-  ];
+
   CategoryModel? categoryModel;
   @override
   Widget build(BuildContext context) {
@@ -35,18 +18,20 @@ class _CategoryViewState extends State<CategoryView> {
 
     return GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          mainAxisSpacing: 2.5,
-          crossAxisSpacing: 2.5,
-          childAspectRatio: 0.7,
+          crossAxisCount: 2,
+          mainAxisSpacing: 15,
+          childAspectRatio: 1,
         ),
-        itemCount: CategoryModel.items.length,
+        itemCount: CategoryModel.myData.length,
         itemBuilder: (context, index){
-          if(CategoryModel.items.isEmpty){
+           Map data = CategoryModel.myData[index];
+          if(CategoryModel.myData.isEmpty){
             return const CircularProgressIndicator();
           }
           else{
+            return CategoryWidget(productName: data['name'], img: data['image']);
           }
+
         });
   }
 }

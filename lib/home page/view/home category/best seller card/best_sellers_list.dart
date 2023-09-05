@@ -21,7 +21,7 @@ class BestSellerList extends StatelessWidget {
         },
         itemCount: 5,
         separatorBuilder: (BuildContext context, int index) {
-          return SizedBox(
+          return const SizedBox(
             width: 10.0,
           );
         },
