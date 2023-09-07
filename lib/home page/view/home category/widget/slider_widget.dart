@@ -12,7 +12,6 @@ class SliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var widthOfTheDevice = MediaQuery.of(context).size.width;
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal: 3.0),
       child: Container(

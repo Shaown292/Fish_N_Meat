@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/constant.dart';
+import '../widgets/appbar/custom_app_bar.dart';
 
 class DetailedPage extends StatefulWidget {
   const DetailedPage({
@@ -22,6 +23,7 @@ class _DetailedPageState extends State<DetailedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const DashBoardAppBar(),
       body: ListView(
         children: [
           Container(

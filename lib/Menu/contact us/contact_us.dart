@@ -1,8 +1,9 @@
 import 'package:fish_n_meat/custom%20fonts/custom_fonts.dart';
+import 'package:fish_n_meat/widgets/appbar/custom_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../constant/constant.dart';
 
-import '../constant/constant.dart';
 
 class ContactUs extends StatelessWidget {
   const ContactUs({Key? key}) : super(key: key);
@@ -10,10 +11,11 @@ class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const DashBoardAppBar(),
       body: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height - 150,
+            height: MediaQuery.of(context).size.height-80,
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -23,32 +25,8 @@ class ContactUs extends StatelessWidget {
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(left: 20),
-                      child: const Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                        size: 32,
-                      ),
-                    ),
-                    Container(
-                      height: 60,
-                      width: 60,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  "assets/images/fish_n_meat_logo.jpeg"))),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                  ],
-                ),
                 Container(
                   height: 500,
                   width: MediaQuery.of(context).size.width,

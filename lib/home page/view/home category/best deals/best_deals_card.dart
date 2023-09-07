@@ -1,4 +1,5 @@
 import 'package:fish_n_meat/custom%20fonts/custom_fonts.dart';
+import 'package:fish_n_meat/detailed%20page/deatils_page_view.dart';
 import 'package:flutter/material.dart';
 
 class BestDealsCard extends StatelessWidget {
@@ -17,77 +18,87 @@ class BestDealsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var widthOfTheDevice = MediaQuery.of(context).size.width;
-    return Card(
-      margin: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              Container(
-                height: 250.0,
-                width: widthOfTheDevice * 0.70,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  image: DecorationImage(
-                    image: AssetImage(img),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-              Positioned(
-                  bottom: 10,
-                  left: 5,
-                  child: Container(
-                    height: 60,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.white70),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(productName,
-                              style: CustomFonts.myStyle(
-                                color: Colors.black,
-                                weight: FontWeight.w700,
-                                size: 18.0,
-                              )),
-                          Text("Gross WT ${weight}gm",
-                              style: CustomFonts.myStyle(
-                                color: Colors.black,
-                                size: 16.0,
-                              )),
-                        ],
-                      ),
-                    ),
-                  )),
-              Positioned(
-                top: 10,
-                right: 10,
-                child: Container(
-                  height: 35.0,
-                  width: 60.0,
+    return GestureDetector(
+      onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DetailedPage(
+                  image: img,
+                  productName: productName,
+                  productValue: productValue,
+                  productQuantity: weight))),
+      child: Card(
+        margin: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: 250.0,
+                  width: widthOfTheDevice * 0.70,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    color: const Color(0xFFFFC107),
-                  ),
-                  child: Center(
-                    child: Text("৳ $productValue",
-                        style: CustomFonts.myStyle(
-                            color: Colors.black,
-                            size: 16.0,
-                            weight: FontWeight.w700)),
+                    image: DecorationImage(
+                      image: AssetImage(img),
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
-              )
-            ],
-          ),
-        ],
+                Positioned(
+                    bottom: 10,
+                    left: 5,
+                    child: Container(
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          color: Colors.white70),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(productName,
+                                style: CustomFonts.myStyle(
+                                  color: Colors.black,
+                                  weight: FontWeight.w700,
+                                  size: 18.0,
+                                )),
+                            Text("Gross WT ${weight}gm",
+                                style: CustomFonts.myStyle(
+                                  color: Colors.black,
+                                  size: 16.0,
+                                )),
+                          ],
+                        ),
+                      ),
+                    )),
+                Positioned(
+                  top: 10,
+                  right: 10,
+                  child: Container(
+                    height: 35.0,
+                    width: 60.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: const Color(0xFFFFC107),
+                    ),
+                    child: Center(
+                      child: Text("৳ $productValue",
+                          style: CustomFonts.myStyle(
+                              color: Colors.black,
+                              size: 16.0,
+                              weight: FontWeight.w700)),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

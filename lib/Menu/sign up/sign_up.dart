@@ -23,9 +23,13 @@ class _SignUpState extends State<SignUp> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Icon(Icons.arrow_back, size: 28, color: Colors.black,),
+            const SizedBox(height: 30,),
+            GestureDetector(
+              onTap: ()=> Navigator.pop(context),
+              child: const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Icon(Icons.arrow_back, size: 28, color: Colors.black,),
+              ),
             ),
             const SizedBox(height: 50.0,),
             Center(
